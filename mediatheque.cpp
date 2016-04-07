@@ -22,9 +22,9 @@ void Mediatheque::bye() const
 
 }
 
-void Mediatheque::clear() const
+void Mediatheque::clear()
 {
- //   matches.clear(); //efface la base de donnée courantes
+  media.clear(); //efface la base de donnée courantes
 }
 
 void Mediatheque::list()
@@ -63,3 +63,4 @@ bool Mediatheque::utilisateur()
 {
     return m_utilisateur;
 }
+

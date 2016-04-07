@@ -28,7 +28,7 @@ public:
 
     bool utilisateur();
     void bye() const;
-    void clear() const;
+    void clear();
     void load(const char * filename); //charge un fichier
     void save(const char * filename); // sauvegarde la base de données dans un fichier
     void search(string chaine) const; //recherche une donnée dans la base de données
@@ -36,7 +36,7 @@ public:
 
 protected:
     vector<Ressources *> media; // base de données de toute notre bibliothèque
-    vector<Ressources *> matches;
+    //vector<Ressources *> matches;
     bool m_utilisateur;
 
 };
