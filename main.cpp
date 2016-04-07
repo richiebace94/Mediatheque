@@ -1,8 +1,18 @@
 #include <QCoreApplication>
 
-int main(int argc, char *argv[])
-{
-    QCoreApplication a(argc, argv);
+#include <algorithm>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
 
-    return a.exec();
+#include "mediatheque.h"
+
+using namespace std;
+
+int main(int argc, char*argv[])
+{
+   // Livre P();
+    cout << "Coucou" << endl;
+return 0;
 }

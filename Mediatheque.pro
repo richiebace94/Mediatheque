@@ -9,4 +9,10 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    mediatheque.cpp
+
+HEADERS += \
+    mediatheque.h \
+    livre.h \
+    ressources.h
