@@ -27,12 +27,14 @@ protected:
     int id;
     int date_parution;
     int date_emprunt;
-    string titre;
+
     string auteur;
     int type;
 
 public:
+    string titre;
     Ressources();
+    Ressources(string m_titre);
     ~Ressources();
     virtual void rm_media();
     virtual void rendre_media();

@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 #include "mediatheque.h"
 #include "ressources.h"
@@ -11,6 +12,7 @@ Mediatheque::Mediatheque()
 {
     //constructeur
 }
+
 
 Mediatheque::~Mediatheque()
 {
@@ -31,7 +33,7 @@ void Mediatheque::list()
 {
     for(int i = 0; media.size();i++)
     {
-        media.at(i)->show();
+      media.at(i)->show();
     }
 }
 
@@ -45,18 +47,20 @@ void Mediatheque::save(const char * filename)
 
 }
 
-void Mediatheque::search(string chaine) const
+void Mediatheque::search(string chaine)
 {
-    /*int i = 0;
-    while(i != media.size())
-    {
-        it = find(media.begin,media.end(), chaine);
-        if (it != media.end())
-        {
-            matches.push_back(media.at(i));
-        }
-        i++;
-    }*/
+   auto it = find_if(media.begin(), media.end(), [&chaine](const Ressources* media) {return (media->titre) == chaine;});
+   if(it != media.end())
+      {
+          auto index = distance(media.begin(), it);
+          matches.push_back(media.at(index));
+          cout << "Trouvé"<<endl;
+      }
+   else
+   {
+       cout << "Pas trouvé"<< endl;
+   }
+
 }
 
 bool Mediatheque::utilisateur()
