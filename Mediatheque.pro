@@ -11,7 +11,8 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     mediatheque.cpp \
-    ressources.cpp
+    ressources.cpp \
+    livre.cpp
 
 HEADERS += \
     mediatheque.h \
